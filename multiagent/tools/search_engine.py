@@ -1,5 +1,5 @@
 import asyncio
-from azentengine.logs import logger
+from multiagent.logs import logger
 from duckduckgo_search import AsyncDDGS
 async def aget_results(word):
     results = await AsyncDDGS(proxies=None).text(word, max_results=100)

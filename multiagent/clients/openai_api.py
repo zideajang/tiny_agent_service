@@ -1,9 +1,10 @@
 import time
 from functools import wraps
 import asyncio
-from azentengine.config import Config
-from azentengine.logs import logger
+from multiagent.config import Config
+from multiagent.logs import logger
 
+from multiagent.clients.base_gpt_api import BaseGPTAPI
 
 class RateLimiter:
     """控制访问的速度频率"""
@@ -25,6 +26,10 @@ class RateLimiter:
             await asyncio.sleep(remaining_time)
             
         self.last_call_time = time.time()
+
+
+
+
 class OpenAIGPTAPI(RateLimiter):
 
     def __init__(self, rpm) -> None:

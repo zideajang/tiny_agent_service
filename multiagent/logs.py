@@ -3,7 +3,7 @@
 
 import sys
 from loguru import logger as _logger
-from azentengine.const import PROJECT_ROOT
+from multiagent.const import PROJECT_ROOT
 
 
 def define_log_level(print_level="INFO", logfile_level="DEBUG"):

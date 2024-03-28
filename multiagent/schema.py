@@ -3,14 +3,14 @@ from __future__ import annotations
 from dataclasses import dataclass,field
 from typing import TypedDict
 
-from azentengine.logs import logger
+from multiagent.logs import logger
 
 
 class RawMessage(TypedDict):
     content:str
     role:str 
 
-
+@dataclass
 class Message:
 
     content:str
