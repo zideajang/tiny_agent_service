@@ -1,15 +1,11 @@
 from unittest.mock import Mock
 import pytest
 from multiagent.logs import logger
-
-
-from multiagent.clients.openai_api import OpenAIGPTAPI as GPTAPI
-
+from multiagent.provider.openai_api import OpenAIGPTAPI
 
 class Context:
     def __init__(self):
-        self._llm_ui = None
-        self._llm_api = GPTAPI()
+        self._llm_api = OpenAIGPTAPI()
 
     @property
     def llm_api(self):
@@ -23,3 +19,9 @@ def llm_api():
     yield _context.llm_api
 
     logger.info("Tearing down the test")
+
+
+@pytest.fixture(scope="function")
+def mock_llm():
+    # Create a mock LLM for testing
+    return Mock()

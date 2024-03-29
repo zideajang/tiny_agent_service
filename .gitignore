@@ -165,3 +165,5 @@ tmp
 examples/doc/*.xlsx
 *.xlsx
 workdir/*
+
+*.txt

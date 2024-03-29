@@ -2,7 +2,7 @@
 
 from abc import ABCMeta
 
-class Singleton(abc.ABCMeta, type):
+class Singleton(ABCMeta, type):
     """
     Singleton metaclass for ensuring only one instance of a class.
     """

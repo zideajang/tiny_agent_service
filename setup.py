@@ -20,6 +20,6 @@ setup(
     keywords="agent multi-role multi-agent programming gpt llm",
     packages=find_packages(
         include=["multiagent"],
-        exclude=["contrib", "docs", "examples","resources","workdir","logs","test"]),
+        exclude=["contrib", "docs", "examples","resources","workdir","logs"]),
     python_requires=">=3.9"
 )
