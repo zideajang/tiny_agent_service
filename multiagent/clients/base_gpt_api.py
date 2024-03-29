@@ -1,7 +1,7 @@
 from typing import Optional
 
 from abc import abstractmethod
-from multiagent.provider.base_chatbot import BaseChatbot
+from multiagent.clients.base_chatbot import BaseChatbot
 from multiagent.logs import logger
 
 
@@ -77,16 +77,6 @@ class BaseGPTAPI(BaseChatbot):
         rsp_text = await self.aask_batch(msgs)
         return rsp_text
 
-    @abstractmethod
-    async def acompletion(self, messages: list[dict]):
-        """Asynchronous version of completion
-        All GPTAPIs are required to provide the standard OpenAI completion interface
-        [
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "hello, show me python hello world code"},
-            # {"role": "assistant", "content": ...}, # If there is an answer in the history, also include it
-        ]
-        """
 
     @abstractmethod
     def completion(self, messages: list[dict]):

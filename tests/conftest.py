@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 import pytest
 from multiagent.logs import logger
-from multiagent.provider.openai_api import OpenAIGPTAPI
+from multiagent.clients.openai_api import OpenAIGPTAPI
 
 class Context:
     def __init__(self):

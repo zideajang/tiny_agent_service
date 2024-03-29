@@ -1,5 +1,5 @@
 import asyncio
-from multiagent.provider.openai_api import OpenAIGPTAPI
+from multiagent.clients.openai_api import OpenAIGPTAPI
 
 async def main():
     openAIGPTAPI = OpenAIGPTAPI()
@@ -18,7 +18,7 @@ async def main():
 
     answer = await openAIGPTAPI.aask_code(['请扮演一个Google Python专家工程师，如果理解，回复明白', '写一个hello world'])
     print(answer)
-    
+
 if __name__ == "__main__":
     asyncio.run(main())
   

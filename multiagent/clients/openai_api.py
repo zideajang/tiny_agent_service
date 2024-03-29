@@ -13,7 +13,7 @@ from multiagent.logs import logger
 from multiagent.utils.singleton import Singleton
 from multiagent.utils.token_counter import TOKEN_COSTS
 
-from multiagent.provider.base_gpt_api import BaseGPTAPI
+from multiagent.clients.base_gpt_api import BaseGPTAPI
 
 def retry(max_retries):
     def decorator(f):
